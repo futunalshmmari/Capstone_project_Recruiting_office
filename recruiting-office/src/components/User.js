@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from "axios"
-import { useState,useEffect} from "react";
+import { useState} from "react";
 function User() {
     const [id, setId] = useState({id:""})
     const [name, setName] = useState({name:""})
