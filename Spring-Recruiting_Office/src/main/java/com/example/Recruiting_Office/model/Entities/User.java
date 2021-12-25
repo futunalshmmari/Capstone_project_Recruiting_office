@@ -1,25 +1,36 @@
 package com.example.Recruiting_Office.model.Entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table
 public class User {
     @Id
-private int id ;
+    private int id;
     private String name;
     private String email;
-    private  String city;
-    private  int phone;
+    private String city;
+    private int phone;
 
-    public User(int id, String name, String email, String city, int phone) {
+
+    @OneToMany(mappedBy = "user")
+    @JsonIgnore
+    private List<Feedback> items = new ArrayList<>();
+
+    public User(int id, String name, String email, String city, int phone, List<Feedback> items) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.city = city;
         this.phone = phone;
+        this.items = items;
     }
 
     public User() {
@@ -65,6 +76,14 @@ private int id ;
         this.phone = phone;
     }
 
+    public List<Feedback> getItems() {
+        return items;
+    }
+
+    public void setItems(List<Feedback> items) {
+        this.items = items;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -73,6 +92,7 @@ private int id ;
                 ", email='" + email + '\'' +
                 ", city='" + city + '\'' +
                 ", phone=" + phone +
+                ", items=" + items +
                 '}';
     }
 }
