@@ -16,7 +16,9 @@ public class Feedback {
     @ManyToOne
     @JoinColumn(name = "user_ID" ,referencedColumnName = "id")
     private User user;
-
+@OneToOne(cascade = CascadeType.ALL)
+@JoinColumn(name ="services_id" )
+private Services services;
 
     public Feedback() {
     }

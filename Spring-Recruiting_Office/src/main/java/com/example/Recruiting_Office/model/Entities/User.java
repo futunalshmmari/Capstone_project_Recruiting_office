@@ -23,14 +23,18 @@ public class User {
     @OneToMany(mappedBy = "user")
     @JsonIgnore
     private List<Feedback> items = new ArrayList<>();
+    @OneToMany(mappedBy = "user")
+    @JsonIgnore
+    private List<Services> items1 = new ArrayList<>();
 
-    public User(int id, String name, String email, String city, int phone, List<Feedback> items) {
+    public User(int id, String name, String email, String city, int phone, List<Feedback> items, List<Services> items1) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.city = city;
         this.phone = phone;
         this.items = items;
+        this.items1 = items1;
     }
 
     public User() {
@@ -84,6 +88,14 @@ public class User {
         this.items = items;
     }
 
+    public List<Services> getItems1() {
+        return items1;
+    }
+
+    public void setItems1(List<Services> items1) {
+        this.items1 = items1;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -93,6 +105,7 @@ public class User {
                 ", city='" + city + '\'' +
                 ", phone=" + phone +
                 ", items=" + items +
+                ", items1=" + items1 +
                 '}';
     }
 }

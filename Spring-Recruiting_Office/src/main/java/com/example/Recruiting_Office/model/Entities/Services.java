@@ -1,8 +1,6 @@
 package com.example.Recruiting_Office.model.Entities;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table
@@ -11,6 +9,11 @@ public class Services {
     private int id ;
     private String category;
     private String description;
+    @ManyToOne
+    @JoinColumn(name = "user_ID" ,referencedColumnName = "id")
+    private User user;
+@OneToOne(mappedBy = "services")
+private Feedback feedback;
 
     public Services(int id, String category, String description) {
         this.id = id;
