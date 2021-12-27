@@ -5,6 +5,7 @@ import User from './components/User'
 import Serivices from './components/Services'
 import Feedback from './components/Feedback'
 import Contractor from './components/Contractor'
+import Opinion from './components/Opinion'
  class App extends Component {
   render() {
     return (
@@ -18,7 +19,7 @@ import Contractor from './components/Contractor'
               <Route path="/contractor" element={<Contractor/>}> </Route>             
              <Route path="/services" element={<Serivices />} /> 
              <Route path="/feedback"  element={<Feedback />} /> 
-          
+          <Route path="/opinion" element={<Opinion/>}/>
           
           </Routes>
        </BrowserRouter>

@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from "axios"
 import { useState} from "react";
+import { Link } from 'react-router-dom';
     function Feedback() {
 const [id, setId] = useState({id:""})
     const [subject, setSubject] = useState({subject:""})
@@ -14,7 +15,7 @@ const [id, setId] = useState({id:""})
          method:"post",
          url:"Feedback/add",
          data:
-          x
+          x 
        });
      }
     return (
@@ -25,7 +26,10 @@ const [id, setId] = useState({id:""})
             email<input type="text" name ="password" onChange={(event) => { setDescription(event.target.value) }}/><br></br>
            
 
-              <button onClick={Register}>Add</button>
+              <button  onClick={Register}>Add</button>
+              <Link to="/opinion"  onClick={Register}>opinion </Link>
+              
+              
             </div>
           );
 

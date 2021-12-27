@@ -17,7 +17,8 @@ import { Link } from 'react-router-dom'
             <Link to='/user'>user</Link>|{" "}
       <Link to='/services'>services </Link>|{" "}
      <Link to='/feedback'>feedback</Link>|{" "}
-       <Link to='/contractor'>Contractor</Link> |{" "}       
+       <Link to='/contractor'>Contractor</Link> |{" "}  
+       <Link to='/opinion' >opinion</Link>   
           </ul>
           
       </div>
