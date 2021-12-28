@@ -1,27 +1,34 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-//import './style.css'
+import './home.css'
 
  const Home =() => {
 
     return (
-      <div className="navbar">
-            
-      <div className="container">
-      
-          <div className="logo">
-              <h2 className="logo-text"> Recruiting Office  </h2>
+      <div className='navbar'>
+        <div className='container'>
+        <div classnName='logo'>
+          <h2 className='logo-text'>gggg</h2>
           </div>
-          <ul className="ul-list">
-            
-            <Link to='/user'>user</Link>|{" "}
-      <Link to='/services'>services </Link>|{" "}
-     <Link to='/feedback'>feedback</Link>|{" "}
-       <Link to='/contractor'>Contractor</Link> |{" "}  
-       <Link to='/opinion' >opinion</Link>   
+          <input type='checkbox' id='nav'/>
+          <label for='nav'></label>
+          <ul className='ul-list'>
+            <li className='list-item'> <Link to='/user'>user</Link></li>
+            <li className='list-item'><Link to='/services'>services </Link></li>
+            <li className='list-item'><Link to='/feedback'>feedback</Link></li>
+            <li className='list-item'>   <Link to='/contractor'>Contractor</Link></li>
+            <li className='list-item'>       <Link to='/opinion' >opinion</Link>   </li>
           </ul>
+           </div> 
           
-      </div>
+
+
+           
+      
+
+   
+          
+   
       
   </div>
     )
