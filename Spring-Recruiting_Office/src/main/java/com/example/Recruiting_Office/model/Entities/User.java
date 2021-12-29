@@ -2,10 +2,7 @@ package com.example.Recruiting_Office.model.Entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,6 +10,7 @@ import java.util.List;
 @Table
 public class User {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
     private String email;
@@ -27,14 +25,12 @@ public class User {
     @JsonIgnore
     private List<Services> items1 = new ArrayList<>();
 
-    public User(int id, String name, String email, String city, int phone, List<Feedback> items, List<Services> items1) {
+    public User(int id, String name, String email, String city, int phone) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.city = city;
         this.phone = phone;
-        this.items = items;
-        this.items1 = items1;
     }
 
     public User() {

@@ -15,10 +15,12 @@ public class Services {
 @OneToOne(mappedBy = "services")
 private Feedback feedback;
 
-    public Services(int id, String category, String description) {
+    public Services(int id, String category, String description, User user, Feedback feedback) {
         this.id = id;
         this.category = category;
         this.description = description;
+        this.user = user;
+        this.feedback = feedback;
     }
 
     public Services() {

@@ -35,6 +35,7 @@ public class FeedbackContoller {
 
     @DeleteMapping(path = "delete/{feedbackId}")
     public void deleteFeedback(@PathVariable ("feedbackId") Integer feedbackId){
+
         feedbackService.deleteFeedback(feedbackId);
     }
 }

@@ -10,8 +10,8 @@ import './home.css'
         <div classnName='logo'>
           <h2 className='logo-text'>gggg</h2>
           </div>
-          <input type='checkbox' id='nav'/>
-          <label for='nav'></label>
+          {/* <input type='checkbox' id='nav'/>
+          <label for='nav'></label> */}
           <ul className='ul-list'>
             <li className='list-item'> <Link to='/user'>user</Link></li>
             <li className='list-item'><Link to='/services'>services </Link></li>

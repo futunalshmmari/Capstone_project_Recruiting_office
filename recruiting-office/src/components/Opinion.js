@@ -45,7 +45,7 @@ deleteOpinion(id){
         this.setState({opinion})
     })
 }
-render(){
+render(){ 
 return(<div>
     <h1>Feedback</h1>
     <table>
@@ -54,6 +54,9 @@ return(<div>
         <div key={item.id}>
             <p>{item.subject}</p>
             <p>{item.description}</p>
+            <p>{item.email}</p> 
+            <p>{item.user.email}</p> 
+            {/* <p>{}</p> */}
             <button onClick={(e) => this.deleteOpinion(item.id, e)}>Delete</button>
                
                 </div>

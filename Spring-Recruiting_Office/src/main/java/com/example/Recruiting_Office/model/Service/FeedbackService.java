@@ -27,6 +27,7 @@ public class FeedbackService {
     public void addNewFeedback(Feedback feedback) {
         feedbackRepository.save(feedback);
     }
+
     public void deleteFeedback(Integer feedbackId) { feedbackRepository.deleteById(feedbackId);
 
     }

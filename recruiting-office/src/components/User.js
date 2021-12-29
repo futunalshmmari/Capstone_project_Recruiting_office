@@ -17,6 +17,7 @@ function User() {
          data:
           x
        });
+       console.log(x);
      }
     return (
             <div>

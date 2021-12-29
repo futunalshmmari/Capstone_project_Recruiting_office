@@ -8,6 +8,7 @@ import javax.persistence.*;
 @Table
 public class Feedback {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id ;
     private String subject;
     private String description;
