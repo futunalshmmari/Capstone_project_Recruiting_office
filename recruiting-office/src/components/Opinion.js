@@ -54,8 +54,9 @@ return(<div>
         <div key={item.id}>
             <p>{item.subject}</p>
             <p>{item.description}</p>
-            <p>{item.email}</p> 
-            <p>{item.user.email}</p> 
+            {/* { <p>{item.email}</p>  */}
+            <p>{item.user.email}</p>
+            <p>{item.services.category}</p>
             {/* <p>{}</p> */}
             <button onClick={(e) => this.deleteOpinion(item.id, e)}>Delete</button>
                
@@ -65,7 +66,6 @@ return(<div>
 </table>
 
 </div>)
-
 
 
 }

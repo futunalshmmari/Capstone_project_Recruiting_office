@@ -13,6 +13,7 @@ import Opinion from './components/Opinion'
 
 <BrowserRouter>
 <Home/> 
+
           <Routes>
            
              <Route path="/user" element={<User />} /> 
