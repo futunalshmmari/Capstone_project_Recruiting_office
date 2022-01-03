@@ -1,11 +1,14 @@
 package com.example.Recruiting_Office.model.Entities;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 import javax.persistence.*;
 
 @Entity
 @Table
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Feedback {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,18 +20,21 @@ public class Feedback {
     @ManyToOne
     @JoinColumn(name = "user_ID" ,referencedColumnName = "id")
     private User user;
-@OneToOne(cascade = CascadeType.ALL)
-@JoinColumn(name ="services_id" )
-private Services services;
+
+    @OneToOne//(cascade = CascadeType.ALL)
+    @JoinColumn(name ="services_id" )
+    private Services services;
 
     public Feedback() {
     }
 
-    public Feedback(int id, String subject, String description, User user) {
+
+    public Feedback(int id, String subject, String description, User user, Services services) {
         this.id = id;
         this.subject = subject;
         this.description = description;
         this.user = user;
+        this.services = services;
     }
 
     public int getId() {
@@ -61,6 +67,14 @@ private Services services;
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public Services getServices() {
+        return services;
+    }
+
+    public void setServices(Services services) {
+        this.services = services;
     }
 
     @Override

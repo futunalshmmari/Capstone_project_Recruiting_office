@@ -1,4 +1,4 @@
 package com.example.Recruiting_Office.model.Config;
 
-public class contractorConfig {
+public class ContractorConfig {
 }

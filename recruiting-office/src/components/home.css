@@ -9,11 +9,13 @@
 .navbar .logo {
     width: 50%;
     float: left;
+
 }
 
 .navbar .logo .logo-text{
     font-size: 30px;
     font-weight: bold
+    
 }
 
 .navbar input , .navbar label {
@@ -30,6 +32,7 @@
     float:right;
     list-style: none;
     padding: 0;
+    
 }
 
 .navbar .ul-list .list-item {

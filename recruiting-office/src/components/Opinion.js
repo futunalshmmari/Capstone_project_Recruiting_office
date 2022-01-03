@@ -32,12 +32,14 @@ constructor(props){
 
     };
 }
+
 componentDidMount(){
     axios.get("Feedback").then(res=>{
         const opinion=res.data
         this.setState({opinion})
     });
 }
+
 deleteOpinion(id){
     axios.delete(`Feedback/delete/${id}`)
     .then(res=>{
