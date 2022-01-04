@@ -21,7 +21,18 @@ public class UserService {
             return userRepository.findById(userId);
 
         }
+    public String getCheck(String name ,String password) {
+        if( userRepository.existsByname(name) ){
+            String pass = userRepository.findPasswordByname(name);
+            if (pass.equals(password)){
+                return "authenticated" ;
+            }
+            else {
+                return "Password does not match"; }
+        }
 
+        return "name not found";
+    }
         public List<User> getUsers() {
             return userRepository.findAll();
         }

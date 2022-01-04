@@ -34,6 +34,13 @@ public class UserContoller {
         userService.addNewUser(user);
     }
 
+    @GetMapping(path = "login")
+    public String checkLogin(@RequestParam (name = "name") String name ,
+                             @RequestParam (name = "password") String password ) {
+        return userService.getCheck(name,password);
+
+    }
+
     @DeleteMapping(path = "delete/{userId}")
     public void deleteUser(@PathVariable ("userId") Integer userId){
         userService.deleteUser(userId);

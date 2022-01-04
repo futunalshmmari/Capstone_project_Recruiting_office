@@ -13,6 +13,7 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
+    private String password;
     private String email;
     private String city;
     private int phone;
@@ -25,12 +26,15 @@ public class User {
     @JsonIgnore
     private List<Services> items1 = new ArrayList<>();
 
-    public User(int id, String name, String email, String city, int phone) {
+    public User(int id, String name, String password, String email, String city, int phone, List<Feedback> items, List<Services> items1) {
         this.id = id;
         this.name = name;
+        this.password = password;
         this.email = email;
         this.city = city;
         this.phone = phone;
+        this.items = items;
+        this.items1 = items1;
     }
 
     public User() {
@@ -50,6 +54,14 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getEmail() {
@@ -92,12 +104,12 @@ public class User {
         this.items1 = items1;
     }
 
-
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 ", city='" + city + '\'' +
                 ", phone=" + phone +
