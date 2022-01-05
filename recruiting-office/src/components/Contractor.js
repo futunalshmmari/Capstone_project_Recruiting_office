@@ -77,8 +77,8 @@ export default class Contractor extends Component {
                             <hr className='line' />
                             <h4 >{item.name}</h4>
                             <h4 >{item.phone}</h4>
-                            <h4 >{item.Address}</h4>
-                            <h4 >{item.Nationality}</h4>
+                            <h4 >{item.address}</h4>
+                            <h4 >{item.nationality}</h4>
 
                             {/* <div className="shower" onClick={this.handleClick} key={item.category}>show description
                                 <div className="opening">{item.description}</div>
@@ -87,7 +87,7 @@ export default class Contractor extends Component {
                    
                          </div>
 
-
+<a href=''></a>
                  </div>
             ))}
         </div>

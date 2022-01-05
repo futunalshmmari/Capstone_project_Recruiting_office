@@ -9,6 +9,8 @@ import Opinion from './components/Opinion'
 import Nursemaid from'./components/Nursemaid'
 import Housemaid from './components/Housemaid'
 import Driver from './components/Driver'
+import Login from'./components/Login'
+import Profile from './components/Profile'
  class App extends Component {
   render() {
     return (
@@ -26,8 +28,11 @@ import Driver from './components/Driver'
              <Route path="/feedback"  element={<Feedback />} /> 
              <Route path="/nursemaid"  element={<Nursemaid />} /> 
              <Route path="/housemaid"  element={<Housemaid />} /> 
-             <Route path="/driver"  element={<Driver />} /> 
+             <Route path="/driver"  element={<Driver />} />
+             <Route path="/profile" element={<Profile/>}/>
           <Route path="/opinion" element={<Opinion/>}/>
+          <Route path="/login" element={<Login/>}/>
+
           
           </Routes>
        </BrowserRouter>

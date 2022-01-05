@@ -1,0 +1,70 @@
+import { useState } from "react"
+
+import React from "react"
+import axios from "axios"
+
+
+export default function Login(props) {
+    let [name, setname] = useState("")
+    let [password, setpassword] = useState("")
+
+    let [login, setlogin] = useState("")
+
+    function handlename(event) {
+        setname((name = event.target.value));
+
+    }
+
+    function handlepassword(event) {
+        setpassword((password = event.target.value));
+    }
+
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        axios({
+            method: "get",
+            url: "user/login",
+            params: { name: name, password: password }
+        })
+            .then((res => {
+                console.log(res.data)
+                if (res.data == "authenticated") {
+                    props.handleLogin()
+                }
+                else {
+
+                    alert(res.data)
+                }
+            }))
+
+    }
+
+    return (
+
+        <div>
+            <form onSubmit={handleSubmit}>
+                <input
+                    type="text"
+                    value={name}
+                    name="name"
+                    placeholder=" name"
+                    onChange={handlename}
+                />
+
+                <input
+                    type="text"
+                    value={password}
+                    name="password"
+                    placeholder=" password"
+                    onChange={handlepassword}
+                />
+                <br />
+                <input type="submit"
+                    value="submit"
+                />
+            </form>
+
+        </div>
+    )
+}
