@@ -11,6 +11,8 @@ import Housemaid from './components/Housemaid'
 import Driver from './components/Driver'
 import Login from'./components/Login'
 import Profile from './components/Profile'
+// import Navbar from './components/Navbar'
+
  class App extends Component {
   render() {
     return (
@@ -18,7 +20,7 @@ import Profile from './components/Profile'
 
 <BrowserRouter>
 <Home/> 
-
+{/* <Navbar/> */}
           <Routes>
 
            

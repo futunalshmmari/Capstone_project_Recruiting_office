@@ -2,6 +2,7 @@ import { useState } from "react"
 
 import React from "react"
 import axios from "axios"
+import './login.css'
 
 
 export default function Login(props) {
@@ -42,28 +43,34 @@ export default function Login(props) {
 
     return (
 
-        <div>
+        <div class='wrap'>
+              Login
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"
                     value={name}
+                    id='username'
                     name="name"
-                    placeholder=" name"
+                    placeholder="Username"
                     onChange={handlename}
                 />
 
                 <input
-                    type="text"
+                    type="password"
                     value={password}
                     name="password"
+                    id='password'
                     placeholder=" password"
                     onChange={handlepassword}
                 />
-                <br />
-                <input type="submit"
+                <button class='forgot'>FORGOT PASSWORD ?</button> <button  type="submit"
+                    value="submit" class='login'>LOG IN</button>
+                {/* <input class='login' type="submit"
                     value="submit"
-                />
+                /> */}
             </form>
+      
+           
 
         </div>
     )

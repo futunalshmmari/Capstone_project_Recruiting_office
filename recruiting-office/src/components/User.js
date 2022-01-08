@@ -24,14 +24,16 @@ function User() {
        console.log(x);
      }
     return (
-            <div>
-              <h2> Register :  </h2><br></br>
-            ID <input type="text" name="firstName"  onChange={(event) => { setId(event.target.value) }} /><br></br>
-             Name <input type="text" name="lastName"  onChange={(event) => { setName(event.target.value) }} /><br></br>
-            City <input type="text" name="firstName"  onChange={(event) => { setCity(event.target.value) }} /><br></br>
-            phone<input type="text" name="firstName"  onChange={(event) => { setPhone(event.target.value) }} /><br></br>
-            email<input type="text" name ="password" onChange={(event) => { setEmail(event.target.value) }}/><br></br>
-              <button onClick={Register}>Add</button>
+            <div class='wrap'>
+              user
+             <input type="text" name="ID" id='username'  placeholder="ID" onChange={(event) => { setId(event.target.value) }} />
+              <input type="text" name="username" placeholder="Username" onChange={(event) => { setName(event.target.value) }} />
+              <input type="text" name="firstname" placeholder="Password" onChange={(event) => { setPassword(event.target.value) }}/>
+             <input type="text" name="City"  placeholder="City" onChange={(event) => { setCity(event.target.value) }} />
+            <input type="text" name="Phone" placeholder="Phone" onChange={(event) => { setPhone(event.target.value) }} />
+            <input type="text" name ="Email" placeholder="Email" onChange={(event) => { setEmail(event.target.value) }}/>
+              <button type="submit"
+                    value="submit" class='login' onClick={Register}>Add</button>
               {/* <h3>Stacked Form</h3>
 <p>How to use CSS to create a stacked form:</p>
 
