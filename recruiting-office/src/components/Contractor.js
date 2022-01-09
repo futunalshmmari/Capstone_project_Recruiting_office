@@ -59,7 +59,12 @@ export default class Contractor extends Component {
     // handleClick = event => {
     //     event.currentTarget.classList.toggle('active');
     //   }
-
+    deleteOpinion(id){
+        axios.delete(`Contractor/delete/${id}`)
+        .then(res=>{
+            const contractor=this.state.contractor.filter(item=> item.id !== id);
+            this.setState({contractor})
+        })}
 
 
     render() {
@@ -84,6 +89,7 @@ export default class Contractor extends Component {
                                 <div className="opening">{item.description}</div>
                             </div> */}
                             <p>{item.description}</p>
+                            <button onClick={(e) => this.deleteOpinion(item.id, e)}>Delete</button>
                    
                          </div>
 

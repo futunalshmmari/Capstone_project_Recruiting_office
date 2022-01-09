@@ -19,11 +19,10 @@ import Profile from './components/Profile'
 <div>
 
 <BrowserRouter>
-<Home/> 
 {/* <Navbar/> */}
           <Routes>
 
-           
+           <Route path="/" element={<Home/>}>
              <Route path="/user" element={<User />} /> 
               <Route path="/contractor" element={<Contractor/>}> </Route>             
              <Route path="/services" element={<Serivices />} /> 
@@ -34,7 +33,7 @@ import Profile from './components/Profile'
              <Route path="/profile" element={<Profile/>}/>
           <Route path="/opinion" element={<Opinion/>}/>
           <Route path="/login" element={<Login/>}/>
-
+          </Route>
           
           </Routes>
        </BrowserRouter>

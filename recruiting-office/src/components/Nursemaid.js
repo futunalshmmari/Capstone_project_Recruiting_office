@@ -18,7 +18,13 @@ export default class Nursemaid extends Component {
     }
 
 
-
+    deleteOpinion(id){
+        axios.delete(`Contractor/delete/${id}`)
+        .then(res=>{
+            const contractor=this.state.contractor.filter(item=> item.id !== id);
+            this.setState({contractor})
+            alert("hhhhhh")
+        })}
 
     render() {
         const mycCntractor = this.state.contractor.filter(item => item.category=="Nursemaid");
@@ -33,17 +39,19 @@ export default class Nursemaid extends Component {
                   <div className='contianer'>
                             <h4 >{item.name}</h4>
                             
+                           
+                            
                             <hr className='line' />
                             <h4 >{item.name}</h4>
                             <h4 >{item.phone}</h4>
-                            <h4 >{item.Address}</h4>
-                            <h4 >{item.Nationality}</h4>
+                            <h4 >{item.address}</h4>
+                            <h4 >{item.nationality}</h4>
 
                             {/* <div className="shower" onClick={this.handleClick} key={item.category}>show description
                                 <div className="opening">{item.description}</div>
                             </div> */}
                             <p>{item.description}</p>
-                   
+                            <button onClick={(e) => this.deleteOpinion(item.id, e)}>Selection</button>
                          </div>
 
 

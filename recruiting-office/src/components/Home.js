@@ -8,12 +8,11 @@ function Home(){
 let[login,setLogin]= useState(false);
 function handleLogin(){
   setLogin(true);
+
 }
 if(!login){
   
   return <div><Login handleLogin={handleLogin}  /></div>;
-
-
 
 }
     return (
@@ -39,22 +38,31 @@ if(!login){
 
            <nav class="navbar">
       <div class="container">
-        <a href="#">
+        {/* <a href="#">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
             alt="apple-logo"
             class="logo"
           />
-        </a>
+        </a> */}
+        <h1>hover <span>&#8595;</span></h1>
+<div class="squares">
+  <div class="one"></div>
+  <div class="two"></div>
+  <div class="three"></div>
+  <div class="four"></div>
+</div>
+
         <ul class="nav">
           <li><Link to='/login'>Login</Link></li>
           <li><Link to='/user'>user</Link></li>
-          <li><Link to='/profile'>Profile</Link></li>
+          
+          {/* <li><Link to='/profile'>Profile</Link></li> */}
           <li><Link to='/services'>services </Link></li>
             <li><Link to='/feedback'>feedback</Link></li> 
              <li><Link to='/contractor'>Contractor</Link></li>  
           <li><Link to='/opinion' >opinion</Link></li>
-         
+        
           <li class="search-mobile"><a href="#"><img src="https://svgshare.com/i/L1v.svg" alt="magnifier" class="magnifier"/></a></li>
         </ul>
       </div>
@@ -65,7 +73,7 @@ if(!login){
    
           
    
-      
+   <Outlet></Outlet>   
   </div>
     )
   }

@@ -24,6 +24,7 @@
 // }
 import React ,{Component} from 'react'
 import axios from 'axios';
+import './opinion.css'
 export default class Opinion extends Component{
 constructor(props){
     super(props)
@@ -50,6 +51,26 @@ deleteOpinion(id){
 render(){ 
 return(<div>
     <h1>Feedback</h1>
+    {/* <div class="page">
+  <div class="timeline">
+    <div class="timeline__group">
+      <span class="timeline__year time" aria-hidden="true">2008</span>
+      <div class="timeline__cards">
+        <div class="timeline__card card">
+          <header class="card__header">
+            <time class="time" datetime="2008-02-02">
+              <span class="time__day">2</span>
+              <span class="time__month">Feb</span>
+            </time>
+          </header>
+          <div class="card__content">
+            <p>Attends the Philadelphia Museum School of Industrial Art. Studies design with Alexey Brodovitch, art director at Harper's Bazaar, and works as his assistant.</p>
+          </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div> */}
     <table>
         <tbody>
     {this.state.opinion.map((item=>(
@@ -59,7 +80,7 @@ return(<div>
             {/* { <p>{item.email}</p>  */}
             <p>{item.user.email}</p>
             <p>{item.services.category}</p>
-            
+        
             {/* <p>{}</p> */}
             <button onClick={(e) => this.deleteOpinion(item.id, e)}>Delete</button>
                

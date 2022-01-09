@@ -31,9 +31,7 @@ ul {
   list-style: none;
 }
 
-h1 {
-  font-size: 4rem;
-}
+
 
 h4 {
   text-transform: uppercase;
@@ -340,6 +338,112 @@ input {
 }
 /* ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, */
 
-/*  NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN*/
+/*  NNNNNNNNNNNNNNNNNNNNNNNNNNNNNmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmNNNNNNNNNNN*/
+h1{
+  font-size: 2em;
+  line-height: 1.5em;
+  margin-top: 0.75em;
+  font-weight: normal;
+  color: rgb(17, 17, 17);
+  text-align: center;
+  text-transform: uppercase;
+}
+.squares{
+  width: 5em;
+  height:5em;
+  margin: 3em auto;
+  transform-style: preserve-3d;
+  perspective: 200;
+  transform:
+    rotateX(0deg)
+    rotateY(0deg)
+    rotateZ(-45deg);
+  box-shadow: inset 0 0 15px rgba(120,120,120,0.5);
+}
+.one, .two, .three, .four{
+  width: 50%;
+  height: 50%;
+  background: red;
+  float:left;
+  opacity:0;
+  box-shadow: 2px 2px 4px rgba(120,120,120,0.5);
+  transition: transform 0.4s, opacity 0.2s;
+}
+.one, .two{
+  transform-origin: top right;
+  transform: rotateY(90deg);
+}
+.one{
+  background: rgb(249, 199, 50);
+  transition-delay: 0.4s;
+}
+.two{
+  background: rgb(127, 227, 94);
+}
+.three{
+  background: rgb(255, 92, 87);
+  transform-origin: top right;
+  transform: rotateX(90deg);
+  transition-delay: 0.8s;
+}
+.four{
+  background: rgb(74, 160, 190);
+  transform-origin: bottom left;
+  transform:rotateY(-90deg);
+  transition-delay: 1.2s;
+}
+.squares:hover div{
+  opacity:1;
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
+.squares{
+  width: 5em;
+  height:5em;
+  margin: 3em auto;
+  transform-style: preserve-3d;
+  perspective: 200;
+  transform:
+    rotateX(0deg)
+    rotateY(0deg)
+    rotateZ(-45deg);
+  box-shadow: inset 0 0 15px rgba(120,120,120,0.5);
+}
+.one, .two, .three, .four{
+  width: 50%;
+  height: 50%;
+  background: red;
+  float:left;
+  opacity:0;
+  box-shadow: 2px 2px 4px rgba(120,120,120,0.5);
+  transition: transform 0.4s, opacity 0.2s;
+}
+.one, .two{
+  transform-origin: top right;
+  transform: rotateY(90deg);
+}
+.one{
+  background: rgb(249, 199, 50);
+  transition-delay: 0.4s;
+}
+.two{
+  background: rgb(127, 227, 94);
+}
+.three{
+  background: rgb(255, 92, 87);
+  transform-origin: top right;
+  transform: rotateX(90deg);
+  transition-delay: 0.8s;
+}
+.four{
+  background: rgb(74, 160, 190);
+  transform-origin: bottom left;
+  transform:rotateY(-90deg);
+  transition-delay: 1.2s;
+}
+.squares:hover div{
+  opacity:1;
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+}
 
-
+ /* hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh */
+ 
