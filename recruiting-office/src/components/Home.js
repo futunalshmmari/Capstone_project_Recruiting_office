@@ -8,7 +8,7 @@ function Home(){
 let[login,setLogin]= useState(false);
 function handleLogin(){
   setLogin(true);
-
+  // window.sessionStorage.setItem("isLoggedln",true)
 }
 if(!login){
   
@@ -45,7 +45,7 @@ if(!login){
             class="logo"
           />
         </a> */}
-        <h1>hover <span>&#8595;</span></h1>
+       <h1>hover <span>&#8595;</span></h1>
 <div class="squares">
   <div class="one"></div>
   <div class="two"></div>

@@ -32,6 +32,7 @@ export default function Login(props) {
                 console.log(res.data)
                 if (res.data == "authenticated") {
                     props.handleLogin()
+                //    localStorage.setItem("isLoggedln",true) 
                 }
                 else {
 

@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react'
+import {Link} from "react-router-dom"
 import axios from 'axios';
 import './services.css';
 
@@ -26,10 +27,10 @@ export default class Services extends Component {
             url: "http://localhost:3000/Services/add",
             data: {
                 id: 2,
-                category: "سائق ",
-                description: "ffff",
+                category: "driver ",
+                description: "Application takes 2 months for new Driver",
                 img:"https://mzadqatar.com//uploads/images/2020/10/24/12066148-89315251d1.png",
-                link: "http://localhost:3000/driver"
+                link: "/driver"
 
 
 
@@ -42,10 +43,10 @@ export default class Services extends Component {
             url: "http://localhost:3000/Services/add",
             data: {
                 id: 3,
-                category: "عامله ",
-                description: "ffff",
+                category: "Maid ",
+                description: "Application takes 3 months",
                 img: "https://www.alyaum.com/uploads/imported_images/media/article/3_frruZDX.jpg",
-                link: "http://localhost:3000/housemaid"
+                link: "/housemaid"
 
 
 
@@ -58,8 +59,8 @@ export default class Services extends Component {
             url: "http://localhost:3000/Services/add",
             data: {
                 id: 4,
-                category: "مربيه ",
-                description: "iiii",
+                category: "Nanny ",
+                description: "Babysitter for 1-10 year olds",
                 img:"https://www.tutoraround.com/uploads/1/1/7/7/117782982/published/nannies-near-me.png?1594292267",
                 link:""
 
@@ -78,8 +79,8 @@ export default class Services extends Component {
 
     render() {
         return (
-            <>
-                <h2 className='work-title'><span>My</span> Services</h2>
+            <><br></br><br></br><br></br><br></br>
+                <h2 className='work-title'><span></span> </h2>
                 <div className='flexer' >
 
 
@@ -92,13 +93,14 @@ export default class Services extends Component {
                               
                                 <p>{item.description}</p>
                                 <div class="tooltip">
-                                <a href={item.link} >link</a>
+                                {/* <a href={item.link} >link</a> */}
+                                <Link to={item.link}>{item.link.substring(1)}</Link>
   <span class="tooltiptext">من هنا</span>
 
                                
                                 </div>
                                 <br></br>
-<a href='housemaid'>hhh</a>
+
                             </div>
 
                         </div>

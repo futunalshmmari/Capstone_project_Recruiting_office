@@ -70,7 +70,7 @@ export default class Contractor extends Component {
     render() {
         return (
             <>
-            <h2 className='work-title'><span>My</span> ggggg</h2>
+            <h2 className='work-title'>Resumes for Contractors</h2>
         <div className='flexer' >
  
             

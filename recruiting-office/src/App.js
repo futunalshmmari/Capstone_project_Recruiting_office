@@ -19,10 +19,11 @@ import Profile from './components/Profile'
 <div>
 
 <BrowserRouter>
-{/* <Navbar/> */}
+
           <Routes>
 
            <Route path="/" element={<Home/>}>
+           
              <Route path="/user" element={<User />} /> 
               <Route path="/contractor" element={<Contractor/>}> </Route>             
              <Route path="/services" element={<Serivices />} /> 
