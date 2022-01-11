@@ -1,1 +1,48 @@
 
+<head> 
+<meta charset="utf"-8>
+<title> hello</title>
+<meta  name ="decription" content="oishii - fine japanese cuisine">
+<link rel="stylesheet type="css/style.css"
+<link rel="stylesheet" type="text/css" href="css/layout.css"
+<link rel="stylesheet" hret="https://maxcdm.bootstsrapcdn.com/"hhhhhhhhhhgfxhhhbhvcxcvc ggvvnbn>
+import React ,{component}from 'react '
+import axios form 'axios'
+import './services.css'
+ export default class Services export Component{
+     consteuctor(props)
+     super(props)
+     this.state={
+         services:[],
+
+     };
+ }
+ componentDidMount(){
+     axios.get("Services").then(res=>
+     const services=res.data
+     this.setState({services})
+     console.log(res.data);
+
+
+     );
+      }
+      axios({
+         method:"post",
+         url:{
+             id:2,
+             category:"",
+             description:"",
+             img:""}})
+             render(){
+                 return(
+                     <>
+                     <h2 className='work-title>.....'
+                     div className="flexer">
+                     
+                 )
+             }
+hhxfvcfgfdxdxfcffd hhh ugfdhjhhhhhj hhhyhgfhghg jgfh hhh pjmvfh jjhh jjj klk df hhhhjhjj hhgfdujn ngikj
+          fjjhhhhnhn   
+         } hhh jhj hygy   hgyu dkbv uhfbm nhj io vcx ui csa kbv cxz oiu qa pjfd vcs mhgd hgb vc uyt vcds cxz yt fd vc al nds cd yt gfd gv hb juh
+         gt kkgnn ty df jh tk wk al fg er xc vs ds as df hj kn fr  fr xd hg kk fg ws g df iub gf ds fr cx sd er sd wq xzs fff 
+      })

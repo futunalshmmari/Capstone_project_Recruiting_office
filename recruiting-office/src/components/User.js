@@ -2,6 +2,7 @@ import React from 'react'
 import axios from "axios"
 import './user.css'
 import { useState} from "react";
+import { Link } from 'react-router-dom';
 function User() {
     const [id, setId] = useState({id:""})
     
@@ -20,7 +21,8 @@ function User() {
          url:"user/add",
          data:
           x
-       });
+       });alert("Register done ")
+      // window.location.reload(false)
        console.log(x);
      }
     return (
@@ -32,8 +34,7 @@ function User() {
              <input type="text" name="City"  placeholder="City" onChange={(event) => { setCity(event.target.value) }} />
             <input type="text" name="Phone" placeholder="Phone" onChange={(event) => { setPhone(event.target.value) }} />
             <input type="text" name ="Email" placeholder="Email" onChange={(event) => { setEmail(event.target.value) }}/>
-              <button type="submit"
-                    value="submit" class='login' onClick={Register}>Add</button>
+            < Link  to="/">   <button type="submit"value="submit" class='login' onClick={Register}>Add</button></Link>
               {/* <h3>Stacked Form</h3>
 <p>How to use CSS to create a stacked form:</p>
 
