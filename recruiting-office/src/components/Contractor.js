@@ -75,7 +75,7 @@ export default class Contractor extends Component {
  
             
             {this.state.contractor.map(item=>(
-                <div className='card' key={item.id}>
+                <div className='cardd' key={item.id}>
                   <div className='contianer'>
                             <h4 >{item.name}</h4>
                             

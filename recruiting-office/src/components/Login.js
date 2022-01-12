@@ -3,13 +3,15 @@ import { useState } from "react"
 import React from "react"
 import axios from "axios"
 import './login.css'
+import { useNavigate } from "react-router-dom"
 
 
 export default function Login(props) {
     let [name, setname] = useState("")
     let [password, setpassword] = useState("")
+const navigate=useNavigate();
 
-    let [login, setlogin] = useState("")
+   
 
     function handlename(event) {
         setname((name = event.target.value));
@@ -31,8 +33,11 @@ export default function Login(props) {
             .then((res => {
                 console.log(res.data)
                 if (res.data == "authenticated") {
-                    props.handleLogin()
+                    // props.handleLogin()
                 //    localStorage.setItem("isLoggedln",true) 
+                localStorage.setItem("isLoggedln","yes")
+                //navigate("/")
+                window.open("/","_self")
                 }
                 else {
 
@@ -65,7 +70,7 @@ export default function Login(props) {
                     onChange={handlepassword}
                 />
                 <button class='forgot'>FORGOT PASSWORD ?</button> <button  type="submit"
-                    value="submit" class='login'>LOG IN</button>
+                    value="submit" class='login' >LOG IN</button>
                 {/* <input class='login' type="submit"
                     value="submit"
                 /> */}
