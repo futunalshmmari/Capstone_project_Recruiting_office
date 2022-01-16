@@ -35,8 +35,7 @@
   /* gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg */
   @import url(https://fonts.googleapis.com/css?family=Karla);
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:300);
-
-.wrap{
+.wrapp{
   padding:120px 0;
   font-size:40px;
   color:#888;
@@ -76,10 +75,10 @@ content:'';
 display:block;
 position:absolute;
 top:8px;
-left:100%; /*should be set to 100% */
+left:100%; 
 width:0;
 height:0;
-border-color: transparent transparent transparent #14a03d; /*border color should be same as div div background color*/
+border-color: transparent transparent transparent #14a03d; 
 border-style: solid;
 border-width: 5px;
 

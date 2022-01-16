@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Karla);
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:300);
 
-.wrap{
+.wraps{
   padding:120px 0;
   font-size:50px;
   color:#888;
@@ -62,6 +62,3 @@ border-width: 5px;
   float:right;
 }
 
-.login.buttonafter {
-    background:#14a03d;
-}

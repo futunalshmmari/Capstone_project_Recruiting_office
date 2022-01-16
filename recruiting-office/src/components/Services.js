@@ -51,8 +51,6 @@ export default class Services extends Component {
 
 
             }
-
-
         })
         axios({
             method: "post",
@@ -79,8 +77,11 @@ export default class Services extends Component {
 
     render() {
         return (
-            <><br></br><br></br><br></br><br></br>
-                <h2 className='work-title'><span></span> </h2>
+            <>
+         
+        
+            <br></br>
+            <h2 className='work-title'>Services</h2><br></br><br></br>
                 <div className='flexer' >
 
 
@@ -90,17 +91,12 @@ export default class Services extends Component {
                                 <img className='img' src={item.img} />
                                 <h4 >{item.category}</h4>
                                 <hr className='line' />
-                              
+                                <p>11 March 2018 <a href="#"> By Kerri</a></p>
                                 <p>{item.description}</p>
                                 <div class="tooltip">
-                                {/* <a href={item.link} >link</a> */}
-                                <Link to={item.link}>{item.link.substring(1)}</Link>
-  <span class="tooltiptext">من هنا</span>
-
-                               
+                           
+                                <Link  to={item.link}>{item.link.substring(1)}</Link>
                                 </div>
-                                <br></br>
-
                             </div>
 
                         </div>
@@ -109,7 +105,37 @@ export default class Services extends Component {
 
 
                 </div>
-            </>)
+            </>
+
+
+// <div >
+// 		<div class="common_space">
+// 			<div class="blog_header">
+// 			<h2>Our <span>Blog</span></h2>
+// 			<p>It is a long established fact that a reader will be of a page when <br/> established fact looking at its layout.</p>
+// 			</div>
+//             {this.state.services.map(item => (
+// 			<div class="blog_item">
+			
+// 					<div class="blog_box"key={item.id}>
+// 						<div class="blog_img">
+// 							<img src={item.img} alt=""/>
+// 						</div>
+// 						<div class="bbc">
+// 							<h5><a href="#">{item.category}</a></h5>
+// 							<p>11 March 2018 <a href="#"> By Kerri</a></p>
+// 							<p>{item.description}.</p>
+// 							<p><a class="bf" href={item.link}> {item.link.substring(1)}...</a></p>
+                           
+// 						</div></div>
+//                         </div>
+               
+                       
+//                         ))}
+                         
+// 					</div>
+// </div>
+            )
     }
 
 }

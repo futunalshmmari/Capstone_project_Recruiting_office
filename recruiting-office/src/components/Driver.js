@@ -17,49 +17,38 @@ export default class Driver extends Component {
             console.log(res.data);
         });
     }
-  
-
-    deleteOpinion(id){
+    deleteOpinion(id) {
         axios.delete(`Contractor/delete/${id}`)
-        .then(res=>{
-            const contractor=this.state.contractor.filter(item=> item.id !== id);
-            this.setState({contractor})
-            alert("hhhhhh")
+            .then(res => {
+                const contractor = this.state.contractor.filter(item => item.id !== id);
+                this.setState({ contractor })
+                alert("Thank you for choosing us...")
 
-        })}
+            })
+    }
 
     render() {
-        const mycCntractor = this.state.contractor.filter(item => item.category=="Driver");
+        const mycCntractor = this.state.contractor.filter(item => item.category == "Driver");
         return (
-            <>
-            <h2 className='work-title'><span>My</span> ggggg</h2>
-        <div className='flexer' >
- 
-            
+            <><br></br><br></br>
+            <h2 className='work-title'>Resumes for Driver</h2><br></br><br></br>
+        <div class="flex-container" >
             {mycCntractor.map(item=>(
-                <div className='card' key={item.id}>
+                <div  key={item.id}>
                   <div className='contianer'>
-                            
-                  <h4 >{item.name}</h4>
-                            
-                            <hr className='line' />
+                            <h4 >{item.name}</h4>
                             <h4 >{item.name}</h4>
                             <h4 >{item.phone}</h4>
                             <h4 >{item.address}</h4>
                             <h4 >{item.nationality}</h4>
-
-                            {/* <div className="shower" onClick={this.handleClick} key={item.category}>show description
-                                <div className="opening">{item.description}</div>
-                            </div> */}
                             <p>{item.description}</p>
-                            <button onClick={(e) => this.deleteOpinion(item.id, e)}>Selection</button>
+                            <button onClick={(e) => this.deleteOpinion(item.id, e)}>Delete</button>
+                          
                          </div>
-
-
                  </div>
-            ))}
-        </div>
-        </>)
+                    ))}
+                </div>
+            </>)
     }
 
 }

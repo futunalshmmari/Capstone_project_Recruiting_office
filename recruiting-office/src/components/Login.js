@@ -37,7 +37,7 @@ const navigate=useNavigate();
                 //    localStorage.setItem("isLoggedln",true) 
                 localStorage.setItem("isLoggedln","yes")
                 //navigate("/")
-                window.open("/","_self")
+                window.open("/navabar","_self")
                 }
                 else {
 
@@ -49,7 +49,7 @@ const navigate=useNavigate();
 
     return (
 
-        <div class='wrap'>
+        <div class='wraps'>
               Login
             <form onSubmit={handleSubmit}>
                 <input
@@ -69,11 +69,7 @@ const navigate=useNavigate();
                     placeholder=" password"
                     onChange={handlepassword}
                 />
-                <button class='forgot'>FORGOT PASSWORD ?</button> <button  type="submit"
-                    value="submit" class='login' >LOG IN</button>
-                {/* <input class='login' type="submit"
-                    value="submit"
-                /> */}
+               <button  type="submit" value="submit" class='login' >LOG IN</button>
             </form>
       
            

@@ -10,7 +10,7 @@ import Nursemaid from'./components/Nursemaid'
 import Housemaid from './components/Housemaid'
 import Driver from './components/Driver'
 import Login from'./components/Login'
-import Profile from './components/Profile'
+import Navabar from './components/Navabar'
 // import Navbar from './components/Navbar'
 
  class App extends Component {
@@ -24,14 +24,17 @@ import Profile from './components/Profile'
 
            <Route path="/" element={<Home/>}>
            
+           
              <Route path="/user" element={<User />} /> 
-              <Route path="/contractor" element={<Contractor/>}> </Route>             
+       
+              <Route path="/contractor" element={<Contractor/>}> </Route>   
+              <Route path="/navabar" element={<Navabar/>}/>          
              <Route path="/services" element={<Serivices />} /> 
              <Route path="/feedback"  element={<Feedback />} /> 
              <Route path="/nursemaid"  element={<Nursemaid />} /> 
              <Route path="/housemaid"  element={<Housemaid />} /> 
              <Route path="/driver"  element={<Driver />} />
-             <Route path="/profile" element={<Profile/>}/>
+         
           <Route path="/opinion" element={<Opinion/>}/>
           <Route path="/login" element={<Login/>}/>
           </Route>
