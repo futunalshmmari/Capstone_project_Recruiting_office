@@ -29,8 +29,7 @@ public class Feedback {
     }
 
 
-    public Feedback(int id, String subject, String description, User user, Services services) {
-        this.id = id;
+    public Feedback(String subject, String description, User user, Services services) {
         this.subject = subject;
         this.description = description;
         this.user = user;

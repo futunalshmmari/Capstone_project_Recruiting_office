@@ -22,6 +22,7 @@ public class FeedbackContoller {
 
     @GetMapping
     public List<Feedback> getFeedbacks() {
+        System.out.println("in feedback get");
         return feedbackService.getFeedbacks();
     }
     @GetMapping(path = "{feedbackId}")
