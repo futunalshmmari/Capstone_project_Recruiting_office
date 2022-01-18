@@ -54,7 +54,7 @@ const navigate=useNavigate();
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"
-                    value={name}
+                    value={name} 
                     id='username'
                     name="name"
                     placeholder="Username"

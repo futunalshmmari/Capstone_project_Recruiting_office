@@ -3,30 +3,35 @@ package com.example.Recruiting_Office.model.Entities;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table
 public class Services {
     @Id
 //    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id ;
+    private int id;
     private String category;
     private String description;
     private String img;
     private String link;
     @ManyToOne
-    @JoinColumn(name = "user_ID" ,referencedColumnName = "id")
+    @JoinColumn(name = "user_ID", referencedColumnName = "id")
     private User user;
-/////////////
-@ManyToOne
-@JoinColumn(name = "Contractorid" ,referencedColumnName = "id")
-private Contractor contractor;
+    /////////////
+    @ManyToOne
+    @JoinColumn(name = "Contractorid", referencedColumnName = "id")
+    private Contractor contractor;
 
-    @OneToOne(mappedBy = "services")
+    //    @OneToOne(mappedBy = "services")
+//    @JsonIgnore
+//    private Feedback feedback;
+    @OneToMany(mappedBy = "services")
     @JsonIgnore
-    private Feedback feedback;
+    private List<Feedback> items = new ArrayList<>();
 
-    public Services(int id, String category, String description, String img, String link, User user, Contractor contractor, Feedback feedback) {
+    public Services(int id, String category, String description, String img, String link, User user, Contractor contractor, List<Feedback> items) {
         this.id = id;
         this.category = category;
         this.description = description;
@@ -34,7 +39,7 @@ private Contractor contractor;
         this.link = link;
         this.user = user;
         this.contractor = contractor;
-        this.feedback = feedback;
+        this.items = items;
     }
 
     public Services() {
@@ -96,11 +101,11 @@ private Contractor contractor;
         this.contractor = contractor;
     }
 
-    public Feedback getFeedback() {
-        return feedback;
+    public List<Feedback> getItems() {
+        return items;
     }
 
-    public void setFeedback(Feedback feedback) {
-        this.feedback = feedback;
+    public void setItems(List<Feedback> items) {
+        this.items = items;
     }
 }

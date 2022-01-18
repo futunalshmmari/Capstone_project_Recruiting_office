@@ -30,13 +30,12 @@ export default class Contractor extends Component {
             {this.state.contractor.map(item=>(
                 <div  key={item.id}>
                   <div className='contianer'>
-                            <h4 >{item.name}</h4>
-                            <h4 >{item.name}</h4>
-                            <h4 >{item.phone}</h4>
-                            <h4 >{item.address}</h4>
-                            <h4 >{item.nationality}</h4>
-                            <p>{item.description}</p>
-                            <button onClick={(e) => this.deleteOpinion(item.id, e)}>Delete</button>
+                            <h4 >name :  {item.name}</h4>
+                            <h4 > phone :{item.phone}</h4>
+                            <h4 > address :{item.address}</h4>
+                            <h4 > nationality :{item.nationality}</h4>
+                            <h4> category :{item.category}</h4>
+                            <button onClick={(e) => this.deleteOpinion(item.id, e)}>option</button>
                            
                          </div>
                  </div>

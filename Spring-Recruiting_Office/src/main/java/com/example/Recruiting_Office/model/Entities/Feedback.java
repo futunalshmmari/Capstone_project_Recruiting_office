@@ -21,9 +21,12 @@ public class Feedback {
     @JoinColumn(name = "user_ID" ,referencedColumnName = "id")
     private User user;
 
-    @OneToOne//(cascade = CascadeType.ALL)
-    @JoinColumn(name ="services_id" )
-    private Services services;
+//    @OneToOne//(cascade = CascadeType.ALL)
+//    @JoinColumn(name ="services_id" )
+//    private Services services;
+@ManyToOne
+@JoinColumn(name ="services_id",referencedColumnName = "id")
+private Services services;
 
     public Feedback() {
     }

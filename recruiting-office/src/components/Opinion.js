@@ -22,73 +22,84 @@
 //         </div>
 //     )
 // }
-import React ,{Component} from 'react'
+import React, { Component } from 'react'
 import axios from 'axios';
 import './opinion.css'
-export default class Opinion extends Component{
-constructor(props){
+export default class Opinion extends Component {
+  constructor(props) {
     super(props)
-    this.state={
-        opinion:[],
+    this.state = {
+      opinion: [],
 
     };
-}
+  }
 
-componentDidMount(){
-    axios.get("Feedback").then(res=>{
-        const opinion=res.data
-        this.setState({opinion})
+  componentDidMount() {
+    axios.get("Feedback").then(res => {
+      const opinion = res.data
+      this.setState({ opinion })
     });
-}
+  }
 
-deleteOpinion(id){
+  deleteOpinion(id) {
     axios.delete(`Feedback/delete/${id}`)
-    .then(res=>{
-        const opinion=this.state.opinion.filter(item=> item.id !== id);
-        this.setState({opinion})
-    })
-}
-render(){ 
-return(<div>
-    <h1>Feedback</h1>
-    {/* <div class="page">
-  <div class="timeline">
-    <div class="timeline__group">
-      <span class="timeline__year time" aria-hidden="true">2008</span>
-      <div class="timeline__cards">
-        <div class="timeline__card card">
-          <header class="card__header">
-            <time class="time" datetime="2008-02-02">
-              <span class="time__day">2</span>
-              <span class="time__month">Feb</span>
-            </time>
-          </header>
-          <div class="card__content">
-            <p>Attends the Philadelphia Museum School of Industrial Art. Studies design with Alexey Brodovitch, art director at Harper's Bazaar, and works as his assistant.</p>
+      .then(res => {
+        const opinion = this.state.opinion.filter(item => item.id !== id);
+        this.setState({ opinion })
+      })
+  }
+  render() {
+    return (<div><br></br><br></br>
+      <h1>Feedback</h1><br></br>
+     
+        <figure class="snip1540">
+          {this.state.opinion.map((item => (
+            <div key={item.id}>
+             <br></br> <br></br> <br></br> <br></br> <br></br>
+              <div class="profile-image"><img src="https://instaker.com/uploads/img/user-img.png" alt="profile-sample1" />
+          <div class="icons"><a href="#"><i class="ion-social-reddit"></i></a>
+            <a href="#"> <i class="ion-social-twitter"></i></a>
+            <a href="#"> <i class="ion-social-vimeo"></i></a>
           </div>
-        </div>
-        </div>
-        </div>
-        </div>
-        </div> */}
-    <table>
-        <tbody>
-    {this.state.opinion.map((item=>(
-        <div key={item.id}>
-            <p>{item.subject}</p>
-            <p>{item.description}</p>
-            <p>{item.user.email}</p>
-            <p>{item.services.category}</p>
-            <button onClick={(e) => this.deleteOpinion(item.id, e)}>Delete</button>
-               
-                </div>
-    )))}
-    </tbody>
-</table>
+          </div>
+          <figcaption>
+            <h1>subject</h1>
+              <p>{item.subject}</p>
+              <h1>description</h1>
+              <p>{item.description}</p>
+              <h3> email:</h3>
+              <p>{item.user.email}</p>
+              <h3>services</h3>
+              <p>{item.services.category}</p>
+              <fieldset class="score">
+  <legend>Score:</legend>
+  
+  <input className='in' type="radio" id="score-5" name="score" value="5"/>
+  <label  title="5 stars" for="score-5">5 stars</label>
+  
+  <input className='in' type="radio" id="score-4" name="score" value="4"/>
+  <label title="4 stars" for="score-4">4 stars</label>
+  
+  <input className='in' type="radio" id="score-3" name="score" value="3"/>
+  <label title="3 stars" for="score-3">3 stars</label>
+  
+  <input className='in' type="radio" id="score-2" name="score" value="2"/>
+  <label title="2 stars" for="score-2">2 stars</label>
+  
+  <input className='in' type="radio" id="score-1" name="score" value="1"/>
+  <label title="1 stars" for="score-1">1 stars</label>
+  
+</fieldset>
+              <button onClick={(e) => this.deleteOpinion(item.id, e)}>Delete</button>
+              </figcaption>
 
-</div>)
+            </div>
+          )))}
+             </figure> 
+
+    </div>)
 
 
-}
+  }
 
 }
