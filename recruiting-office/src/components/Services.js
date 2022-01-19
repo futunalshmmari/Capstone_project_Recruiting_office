@@ -91,7 +91,7 @@ export default class Services extends Component {
                                 <img className='img' src={item.img} />
                                 <h4 >{item.category}</h4>
                                 <hr className='line' />
-                                <p>11 March 2018 <a href="#"> By Kerri</a></p>
+                                <p>2022 <a href="#">...</a></p>
                                 <p>{item.description}</p>
                                 <div class="tooltip">
                            

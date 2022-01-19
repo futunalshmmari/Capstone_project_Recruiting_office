@@ -31,10 +31,10 @@ class ServicesContollerTest {
 
     @Test
     void testGetServicess() {
-        when(servicesService.getServicess()).thenReturn(Arrays.<Services>asList(new Services(0, "category", "description", "img", "link", new User(0, "name", "password", "email", "city", 0, Arrays.<Feedback>asList(new Feedback("subject", "description", null, null)), Arrays.<Services>asList(null)), new Contractor(0, "name", 0, "address", "nationality", "category", Arrays.<Services>asList(null)), new Feedback("subject", "description", new User(0, "name", "password", "email", "city", 0, Arrays.<Feedback>asList(null), Arrays.<Services>asList(null)), null))));
+        when(servicesService.getServicess()).thenReturn(Arrays.<Services>asList(new Services(0, "category", "description", "img", "link", new User("name", "password", "email", "city", 0, Arrays.<Feedback>asList(new Feedback("subject", "description", null, null)), Arrays.<Services>asList(null)), new Contractor(0, "name", 0, "address", "nationality", "category", Arrays.<Services>asList(null)), Arrays.<Feedback>asList(new Feedback("subject", "description", new User("name", "password", "email", "city", 0, Arrays.<Feedback>asList(null), Arrays.<Services>asList(null)), null)))));
 
         List<Services> result = servicesContoller.getServicess();
-        Assertions.assertEquals(Arrays.<Services>asList(new Services(0, "category", "description", "img", "link", new User(0, "name", "password", "email", "city", 0, Arrays.<Feedback>asList(new Feedback("subject", "description", null, null)), Arrays.<Services>asList(null)), new Contractor(0, "name", 0, "address", "nationality", "category", Arrays.<Services>asList(null)), new Feedback("subject", "description", new User(0, "name", "password", "email", "city", 0, Arrays.<Feedback>asList(null), Arrays.<Services>asList(null)), null))), result);
+        Assertions.assertEquals(Arrays.<Services>asList(new Services(0, "category", "description", "img", "link", new User("name", "password", "email", "city", 0, Arrays.<Feedback>asList(new Feedback("subject", "description", null, null)), Arrays.<Services>asList(null)), new Contractor(0, "name", 0, "address", "nationality", "category", Arrays.<Services>asList(null)), Arrays.<Feedback>asList(new Feedback("subject", "description", new User("name", "password", "email", "city", 0, Arrays.<Feedback>asList(null), Arrays.<Services>asList(null)), null)))), result);
     }
 
     @Test
@@ -47,7 +47,7 @@ class ServicesContollerTest {
 
     @Test
     void testRegisterNewServices() {
-        servicesContoller.registerNewServices(new Services(0, "category", "description", "img", "link", new User(0, "name", "password", "email", "city", 0, Arrays.<Feedback>asList(new Feedback("subject", "description", null, null)), Arrays.<Services>asList(null)), new Contractor(0, "name", 0, "address", "nationality", "category", Arrays.<Services>asList(null)), new Feedback("subject", "description", new User(0, "name", "password", "email", "city", 0, Arrays.<Feedback>asList(null), Arrays.<Services>asList(null)), null)));
+        servicesContoller.registerNewServices(new Services(0, "category", "description", "img", "link", new User("name", "password", "email", "city", 0, Arrays.<Feedback>asList(new Feedback("subject", "description", null, null)), Arrays.<Services>asList(null)), new Contractor(0, "name", 0, "address", "nationality", "category", Arrays.<Services>asList(null)), Arrays.<Feedback>asList(new Feedback("subject", "description", new User("name", "password", "email", "city", 0, Arrays.<Feedback>asList(null), Arrays.<Services>asList(null)), null))));
     }
 
     @Test

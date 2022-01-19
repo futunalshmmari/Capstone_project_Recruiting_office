@@ -33,10 +33,9 @@ const navigate=useNavigate();
             .then((res => {
                 console.log(res.data)
                 if (res.data == "authenticated") {
-                    // props.handleLogin()
-                //    localStorage.setItem("isLoggedln",true) 
+               
                 localStorage.setItem("isLoggedln","yes")
-                //navigate("/")
+             
                 window.open("/navabar","_self")
                 }
                 else {

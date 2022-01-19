@@ -32,7 +32,7 @@ class UserServiceTest {
     @Test
     void testGetUser() {
         Optional<User> result = userService.getUser(Integer.valueOf(0));
-        Assertions.assertEquals(Optional.empty(), result);
+        Assertions.assertEquals(null, result);
     }
 
     @Test
@@ -41,18 +41,18 @@ class UserServiceTest {
         when(userRepository.existsByname(anyString())).thenReturn(Boolean.TRUE);
 
         String result = userService.getCheck("name", "password");
-        Assertions.assertEquals("Password does not match", result);
+        Assertions.assertEquals("replaceMeWithExpectedResult", result);
     }
 
     @Test
     void testGetUsers() {
         List<User> result = userService.getUsers();
-        Assertions.assertEquals(Arrays.<User>asList(new User(0, "name", "password", "email", "city", 0, Arrays.<Feedback>asList(new Feedback("subject", "description", null, new Services(0, "category", "description", "img", "link", null, new Contractor(0, "name", 0, "address", "nationality", "category", Arrays.<Services>asList(null)), null))), Arrays.<Services>asList(new Services(0, "category", "description", "img", "link", null, new Contractor(0, "name", 0, "address", "nationality", "category", Arrays.<Services>asList(null)), new Feedback("subject", "description", null, null))))), result);
+        Assertions.assertEquals(Arrays.<User>asList(new User("name", "password", "email", "city", 0, Arrays.<Feedback>asList(new Feedback("subject", "description", null, new Services(0, "category", "description", "img", "link", null, new Contractor(0, "name", 0, "address", "nationality", "category", Arrays.<Services>asList(null)), Arrays.<Feedback>asList(null)))), Arrays.<Services>asList(new Services(0, "category", "description", "img", "link", null, new Contractor(0, "name", 0, "address", "nationality", "category", Arrays.<Services>asList(null)), Arrays.<Feedback>asList(new Feedback("subject", "description", null, null)))))), result);
     }
 
     @Test
     void testAddNewUser() {
-        userService.addNewUser(new User(0, "name", "password", "email", "city", 0, Arrays.<Feedback>asList(new Feedback("subject", "description", null, new Services(0, "category", "description", "img", "link", null, new Contractor(0, "name", 0, "address", "nationality", "category", Arrays.<Services>asList(null)), null))), Arrays.<Services>asList(new Services(0, "category", "description", "img", "link", null, new Contractor(0, "name", 0, "address", "nationality", "category", Arrays.<Services>asList(null)), new Feedback("subject", "description", null, null)))));
+        userService.addNewUser(new User("name", "password", "email", "city", 0, Arrays.<Feedback>asList(new Feedback("subject", "description", null, new Services(0, "category", "description", "img", "link", null, new Contractor(0, "name", 0, "address", "nationality", "category", Arrays.<Services>asList(null)), Arrays.<Feedback>asList(null)))), Arrays.<Services>asList(new Services(0, "category", "description", "img", "link", null, new Contractor(0, "name", 0, "address", "nationality", "category", Arrays.<Services>asList(null)), Arrays.<Feedback>asList(new Feedback("subject", "description", null, null))))));
     }
 
     @Test

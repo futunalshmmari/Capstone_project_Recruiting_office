@@ -5,16 +5,6 @@ import Login from './Login'
 import './home.css'
 
 function Home() {
-  // let[login,setLogin]= useState(false);
-  // function handleLogin(){
-  //   setLogin(true);
-  //   // window.sessionStorage.setItem("isLoggedln",true)
-  // }
-  // if(!login){
-
-  //   return <div><Login handleLogin={handleLogin}  /></div>;
-
-  // }
   let loggedIn = localStorage.getItem("isLoggedln")
   if (loggedIn != "yes") {
     return (

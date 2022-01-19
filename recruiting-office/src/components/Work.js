@@ -15,7 +15,7 @@ export default function Work() {
 				<div class="common_space">
 					<h4>welcome</h4>
 					<h1>In Recruiting Office</h1>
-					<p>Our goal is your comfort.</p>
+					<p>Our goal is your comfort.</p><br></br>
 					<a href="/login">Login </a>
 				</div>
 			</div>
@@ -89,46 +89,6 @@ export default function Work() {
 		</div>
 	</section>
 
-	{/* <section class="hireme_area">
-		<div class="common_space">
-			<div class="hireme_items">
-				<div class="hireme_text">
-					<h2>I Am Available For Freelancer.</h2>
-				</div>
-				<div class="hireme_button">
-					<a href="#0">Hire Me!</a>
-				</div>
-			</div>
-		</div>
-	</section> */}
-
-	{/* <section class="client_area">
-		<div class="common_space">
-			<div class="client_items">
-				<h2>Our <span>Client</span></h2>
-				<p>It is a long established fact that a reader will be of a page when <br/> established fact looking at its layout.</p>
-				<div class="client_icon">
-					<i class="fas fa-quote-left"></i>
-				</div>
-				<div class="client_img">
-					<img src="img/client.png" alt=""/>
-				</div>
-				<div class="client_review">
-				<p>
-					" The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, <br/> as opposed to using 'Content here."
-				</p>
-				</div>
-				<div class="client_name">
-				<p>- Ebony verty, <span>Envato</span></p>
-				</div>
-				<div class="client_border">
-					<span></span>
-					<span class="activated"></span>
-					<span></span>
-				</div>
-			</div>
-		</div>
-	</section> */}
 
 	<section class="portfolio_area">
 		<div class="common_space">
@@ -136,13 +96,7 @@ export default function Work() {
 					<h2>Our <span>Works</span></h2>
 					<p>Recruiting a private driver<br/> </p>
 				</div>
-				{/* <div class="portfolio_header_btn">
-					<span><a class="active" href="#">ALL</a></span>
-					<span><a href="#">SEO</a></span>
-					<span><a href="#">WEBDESIGN</a></span>
-					<span><a href="#">WORKS</a></span>
-					<span><a href="#">WORDPRESS</a></span>
-				</div>  */}
+
 				<br></br> 	<br></br>	<br></br>	<br></br>	<br></br>	<br></br>	<br></br>
 			<div class="portfolio_items">
 				<div class="portfolio_item">
@@ -173,35 +127,7 @@ export default function Work() {
 					</div>
 				</div>
 			</div>
-			{/* <div class="portfolio_items">
-				<div class="portfolio_item">
-					<img src="https://i.ibb.co/429mZQw/4.jpg" alt=""/>
-					<div class="portfolio_overly">
-						<div class="poc">
-							<h5>Category</h5>
-							<h3>Project Title</h3>
-						</div>
-					</div>
-				</div>
-				<div class="portfolio_item cmlr">
-					<img src="https://i.ibb.co/3Tn88HK/5.jpg" alt=""/>
-					<div class="portfolio_overly">
-						<div class="poc">
-							<h5>Category</h5>
-							<h3>Project Title</h3>
-						</div>
-					</div>
-				</div>
-				<div class="portfolio_item">
-					<img src="https://i.ibb.co/gZcQcr5/6.jpg" alt=""/>
-					<div class="portfolio_overly">
-						<div class="poc">
-							<h5>Category</h5>
-							<h3>Project Title</h3>
-						</div>
-					</div>
-				</div>
-			</div> */}
+		
 		</div>
 	</section>
 

@@ -32,18 +32,18 @@ class FeedbackServiceTest {
     @Test
     void testGetFeedback() {
         Optional<Feedback> result = feedbackService.getFeedback(Integer.valueOf(0));
-        Assertions.assertEquals(Optional.empty(), result);
+        Assertions.assertEquals(null, result);
     }
 
     @Test
     void testGetFeedbacks() {
         List<Feedback> result = feedbackService.getFeedbacks();
-        Assertions.assertEquals(Arrays.<Feedback>asList(new Feedback("subject", "description", new User(0, "name", "password", "email", "city", 0, Arrays.<Feedback>asList(null), Arrays.<Services>asList(new Services(0, "category", "description", "img", "link", null, new Contractor(0, "name", 0, "address", "nationality", "category", Arrays.<Services>asList(null)), null))), new Services(0, "category", "description", "img", "link", new User(0, "name", "password", "email", "city", 0, Arrays.<Feedback>asList(null), Arrays.<Services>asList(null)), new Contractor(0, "name", 0, "address", "nationality", "category", Arrays.<Services>asList(null)), null))), result);
+        Assertions.assertEquals(Arrays.<Feedback>asList(new Feedback("subject", "description", new User("name", "password", "email", "city", 0, Arrays.<Feedback>asList(null), Arrays.<Services>asList(new Services(0, "category", "description", "img", "link", null, new Contractor(0, "name", 0, "address", "nationality", "category", Arrays.<Services>asList(null)), Arrays.<Feedback>asList(null)))), new Services(0, "category", "description", "img", "link", new User("name", "password", "email", "city", 0, Arrays.<Feedback>asList(null), Arrays.<Services>asList(null)), new Contractor(0, "name", 0, "address", "nationality", "category", Arrays.<Services>asList(null)), Arrays.<Feedback>asList(null)))), result);
     }
 
     @Test
     void testAddNewFeedback() {
-        feedbackService.addNewFeedback(new Feedback("subject", "description", new User(0, "name", "password", "email", "city", 0, Arrays.<Feedback>asList(null), Arrays.<Services>asList(new Services(0, "category", "description", "img", "link", null, new Contractor(0, "name", 0, "address", "nationality", "category", Arrays.<Services>asList(null)), null))), new Services(0, "category", "description", "img", "link", new User(0, "name", "password", "email", "city", 0, Arrays.<Feedback>asList(null), Arrays.<Services>asList(null)), new Contractor(0, "name", 0, "address", "nationality", "category", Arrays.<Services>asList(null)), null)));
+        feedbackService.addNewFeedback(new Feedback("subject", "description", new User("name", "password", "email", "city", 0, Arrays.<Feedback>asList(null), Arrays.<Services>asList(new Services(0, "category", "description", "img", "link", null, new Contractor(0, "name", 0, "address", "nationality", "category", Arrays.<Services>asList(null)), Arrays.<Feedback>asList(null)))), new Services(0, "category", "description", "img", "link", new User("name", "password", "email", "city", 0, Arrays.<Feedback>asList(null), Arrays.<Services>asList(null)), new Contractor(0, "name", 0, "address", "nationality", "category", Arrays.<Services>asList(null)), Arrays.<Feedback>asList(null))));
     }
 
     @Test

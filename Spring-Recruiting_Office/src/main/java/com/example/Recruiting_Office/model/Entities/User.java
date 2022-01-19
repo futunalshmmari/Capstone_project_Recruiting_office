@@ -27,8 +27,7 @@ public class User {
     @JsonIgnore
     private List<Services> items1 = new ArrayList<>();
 
-    public User(int id, String name, String password, String email, String city, int phone, List<Feedback> items, List<Services> items1) {
-        this.id = id;
+    public User(String name, String password, String email, String city, int phone, List<Feedback> items, List<Services> items1) {
         this.name = name;
         this.password = password;
         this.email = email;

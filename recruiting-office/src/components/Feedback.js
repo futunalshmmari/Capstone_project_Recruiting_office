@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from "axios"
+// import { Link } from 'react-router-dom';
 import { useState } from "react";
 import './feedback.css'
 // import { Link } from 'react-router-dom';
@@ -26,22 +27,6 @@ function Feedback() {
   }
   return (
     <div>
-{/* 
-      <div className='drop'>
-        <div className='container'>
-          <h2 className='drop-title'><span></span>Feedback</h2>
-          <form action="" >
-            <div className='form-input'>
-              <input type="text" placeholder="id" onChange={(event) => { setId(event.target.value) }} />
-              <input type="text" placeholder="foreign" onChange={(event) => { setUser(event.target.value) }} />
-              <input type="text" placeholder="foreign setServices" onChange={(event) => { setServices(event.target.value) }} />
-            </div>
-            <input type="text" className='sub' placeholder="Your Subject" onChange={(event) => { setSubject(event.target.value) }} />
-            <textarea cols="30" rows="10" placeholder="Your Message" onChange={(event) => { setDescription(event.target.value) }}></textarea>
-            <input type="submit" value="Send Message" onClick={Register} />
-          </form>
-        </div>
-      </div> */}
       <div class="contact_form">
 					<form>
 			            <div class="row">
@@ -70,7 +55,7 @@ function Feedback() {
 			                    <textarea id="issue" placeholder="Describe your issue in detail here" rows="3"  onChange={(event) => { setDescription(event.target.value) }}></textarea>
 			                </div>
 			            </div>
-			            <button  type="submit" value="Send Message" onClick={Register}>Submit</button>
+                    <button  type="submit" value="Send Message" onClick={Register}>Submit</button>
         			</form>
 				</div>
 
